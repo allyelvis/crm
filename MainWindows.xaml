@@ -1,0 +1,40 @@
+<Window x:Class="FinancialManagementSystem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Financial Management System" Height="450" Width="800">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Add Product">
+                <StackPanel Margin="10">
+                    <TextBox Name="ProductName" PlaceholderText="Product Name" Margin="0,10"/>
+                    <TextBox Name="ProductPrice" PlaceholderText="Product Price" Margin="0,10"/>
+                    <TextBox Name="ProductStock" PlaceholderText="Product Stock" Margin="0,10"/>
+                    <Button Content="Add Product" Click="AddProduct_Click" Margin="0,10"/>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Update Product">
+                <StackPanel Margin="10">
+                    <TextBox Name="UpdateProductId" PlaceholderText="Product ID" Margin="0,10"/>
+                    <TextBox Name="UpdateProductPrice" PlaceholderText="Product Price" Margin="0,10"/>
+                    <TextBox Name="UpdateProductStock" PlaceholderText="Product Stock" Margin="0,10"/>
+                    <Button Content="Update Product" Click="UpdateProduct_Click" Margin="0,10"/>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="POS Transaction">
+                <StackPanel Margin="10">
+                    <TextBox Name="POSProductId" PlaceholderText="Product ID" Margin="0,10"/>
+                    <TextBox Name="POSQuantity" PlaceholderText="Quantity" Margin="0,10"/>
+                    <Button Content="Submit Transaction" Click="SubmitTransaction_Click" Margin="0,10"/>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Sales Report">
+                <StackPanel Margin="10">
+                    <DatePicker Name="StartDate" Margin="0,10"/>
+                    <DatePicker Name="EndDate" Margin="0,10"/>
+                    <Button Content="Generate Report" Click="GenerateReport_Click" Margin="0,10"/>
+                    <DataGrid Name="SalesReportGrid" Margin="0,20"/>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
