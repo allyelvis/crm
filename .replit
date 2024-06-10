@@ -1,0 +1,17 @@
+modules = ["bash:v1-20231215-e6d471c", "nodejs-20"]
+run = "node server.js"
+
+[nix]
+channel = "stable-23_05"
+
+[deployment]
+run = ["sh", "-c", "node server.js"]
+deploymentTarget = "cloudrun"
+
+[[ports]]
+localPort = 3000
+externalPort = 3000
+
+[[ports]]
+localPort = 8080
+externalPort = 80
