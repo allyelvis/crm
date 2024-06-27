@@ -1,11 +1,11 @@
-modules = ["bash:v1-20231215-e6d471c", "nodejs-20"]
-run = "node server.js"
+modules = ["bash", "dotnet-7.0", "nix", "nodejs-20", "python-3.10"]
+run = "npm install"
 
 [nix]
-channel = "stable-23_05"
+channel = "stable-23_11"
 
 [deployment]
-run = ["sh", "-c", "node server.js"]
+run = ["sh", "-c", "npm install"]
 deploymentTarget = "cloudrun"
 
 [[ports]]
@@ -15,3 +15,7 @@ externalPort = 3000
 [[ports]]
 localPort = 8080
 externalPort = 80
+
+[[ports]]
+localPort = 9005
+externalPort = 3001
