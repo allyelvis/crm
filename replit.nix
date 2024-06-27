@@ -1,5 +1,8 @@
 { pkgs }: {
   deps = [
+    pkgs.pkg-config
+    pkgs.ncurses
+    pkgs.gdb
     pkgs.go_1_19
     pkgs.rustc
     pkgs.typescript
